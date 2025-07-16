@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor Mentee Management</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .split {
+            width: 50%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .image-side {
+            background-image: url("./image.png"); /* Ensure correct image path */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100%;
+        }
+
+        .content-side {
+            background-color: #fef6e4; /* Soft cream background */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .content {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .btn, .login-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: #ff6f61; /* Coral color */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn:hover, .login-btn:hover {
+            background-color: #d95d50; /* Darker coral */
+        }
+
+        .login-form {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            max-width: 300px;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .login-form.active {
+            display: flex;
+        }
+
+        .login-form input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .login-form input:focus {
+            outline: none;
+            border-color: #ff6f61;
+            box-shadow: 0 0 5px rgba(255, 111, 97, 0.5);
+        }
+
+        .login-form .signup-link {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .login-form .signup-link a {
+            color: #ff6f61;
+            text-decoration: none;
+        }
+
+        .login-form .signup-link a:hover {
+            text-decoration: underline;
+        }
+
+        .heading {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333; /* Dark grey for contrast */
+        }
+    </style>
+</head>
+<body>
+    <div class="split image-side"></div>
+    
+    <div class="split content-side">
+        <div class="content">
+            <div class="heading">Mentor Mentee Management System</div><br>
+            <button class="btn" id="loginButton" onclick = "http://localhost:8080/MMS/login2.jsp">Login</button>
+            
+           
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("loginButton").addEventListener("click", function () {
+            document.getElementById("loginForm").classList.toggle("active");
+        });
+    </script>
+</body>
+</html>

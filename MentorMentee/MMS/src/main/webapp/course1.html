@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor-Mentee Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff7e6;
+            display: flex;
+            height: 100vh;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+        .header {
+            background-color: #ffcc66;
+            height: 300px;
+            width: 100%;
+            border-bottom-left-radius: 100px;
+            border-bottom-right-radius: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            position: relative;
+        }
+        .home-container {
+            position: absolute;
+            left: 400px;
+            top: 30px;
+            text-align: right;
+        }
+        .home-container1 {
+            position: absolute;
+            left: 400px;
+            top: 80px;
+            text-align: right;
+        }
+        .home-container2 {
+            position: absolute;
+            left: 400px;
+            top: 45px;
+            text-align: right;
+        }
+        .home-link {
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+            display: block;
+        }
+        .status-message {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+            margin-left: 20px;
+        }
+        .profile-pic {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+        }
+        .user-name {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+        .user-role {
+            font-size: 16px;
+            color: gray;
+            margin-top: 0;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: 20px;
+            width: 200px;
+            margin-left: 20px;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #ffcc66;
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            border-radius: 30px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .content {
+            flex-grow: 1;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 60%;
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+      .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: 20px;
+            width: 200px;
+            margin-left: 20px; /* Move buttons to the left side */
+        }
+        .module {
+            margin-bottom: 1em;
+            background-color: #ffcc66;
+            color: white;
+            padding: 1em;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+        .module:hover {
+            background-color: #ff9900;
+        }
+        .arrow {
+            transition: transform 0.3s;
+        }
+        .module-details {
+            display: none;
+            margin-top: 0.5em;
+            background-color: #f0f4f8;
+            color: black;
+            padding: 1em;
+            border-radius: 8px;
+        }
+         .task-box {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+            .video-container {
+            width: 60%;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            display: none;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            border-radius: 10px;
+            z-index: 10;
+        }
+        .video-container video {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .close-video {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            font-size: 20px;
+            color: white;
+            cursor: pointer;
+            background: red;
+            border-radius: 50%;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+ <script>
+        function toggleModule(moduleId, arrowId) {
+            var module = document.getElementById(moduleId);
+            var arrow = document.getElementById(arrowId);
+            if (module.style.display === "none" || module.style.display === "") {
+                module.style.display = "block";
+                arrow.style.transform = "rotate(180deg)";
+            } else {
+                module.style.display = "none";
+                arrow.style.transform = "rotate(0deg)";
+            }
+        }
+        
+        function playVideo() {
+            var videoContainer = document.getElementById("video-container");
+            videoContainer.style.display = "block";
+        }
+        
+        function closeVideo() {
+            var videoContainer = document.getElementById("video-container");
+            videoContainer.style.display = "none";
+        }
+    </script>
+    <div class="header">
+        <div class="profile-container">
+            <img src="logo.jpg" alt="Profile" class="profile-pic">
+            <p class="user-name">Divya Sri Durga</p>
+            <p class="user-role">Mentee</p>
+        </div>
+    </div>
+   <div class="button-container">
+        <a href="http://localhost:8080/MMS/dashboard1.html#" class="btn">Home</a>
+        <a href="#" class="btn">Learning</a>
+        <a href="#" class="btn">Course</a>
+        <a href="#" class="btn">My Mentor</a>
+        <a href="#" class="btn">Mentors</a>
+    </div>
+     <div class="video-container" id="video-container">
+        <span class="close-video" onclick="closeVideo()">&times;</span>
+        <video controls>
+            <source src="video.mp4" type="video/mp4">Your browser does not support the video tag.
+        </video>
+        </div>
+    <div class="content">
+        <h2>Full Stack Development Course</h2>
+        <p>Become a skilled developer and kickstart your tech career!</p>
+        <h2>Modules in the Course</h2>
+        <div class="module" onclick="toggleModule('module1', 'arrow1')">
+            Module 1: Introduction to Web Development Basics 
+            <span class="arrow" id="arrow1">▼</span>
+        </div>
+        
+        
+        <div class="module-details" id="module1">
+            <div class="task-box">Task 1: Learn HTML Basics</div>
+            <div class="task-box">Task 2: Understand CSS Fundamentals</div>
+            <div class="task-box">Task 3: JavaScript Introduction</div>
+            <div class="task-box">Task 4: Build a Simple Web Page</div>
+            <div class="task-box">Task 5: Debugging Basics</div>
+        </div>
+        <div class="module" onclick="toggleModule('module2', 'arrow2')">
+            Module 2: Advanced Frontend with React 
+            <span class="arrow" id="arrow2">▼</span>
+        </div>
+         <div class="module-details" id="module2">
+            <div class="task-box">Task 1: Learn HTML Basics</div>
+            <div class="task-box" >Task 2: Understand CSS Fundamentals</div>
+            <div class="task-box">Task 3: JavaScript Introduction</div>
+            <div class="task-box">Task 4: Build a Simple Web Page</div>
+            <div class="task-box">Task 5: Debugging Basics</div>
+        </div>
+        <div class="module" onclick="toggleModule('module3', 'arrow3')">
+            Module 3: Backend Development with Node.js
+            <span class="arrow" id="arrow3">▼</span>
+        </div>
+        <div class="module-details" id="module3">
+            <div class="task-box">Task 1: Learn HTML Basics</div>
+            <div class="task-box">Task 2: Understand CSS Fundamentals</div>
+            <div class="task-box">Task 3: JavaScript Introduction</div>
+            <div class="task-box">Task 4: Build a Simple Web Page</div>
+            <div class="task-box">Task 5: Debugging Basics</div>
+        </div>
+        <div class="module" onclick="toggleModule('module4', 'arrow4')">
+            Module 4: Database Management with MongoDB
+            <span class="arrow" id="arrow4">▼</span>
+        </div>
+         <div class="module-details" id="module4">
+            <div class="task-box">Task 1: Learn HTML Basics</div>
+            <div class="task-box">Task 2: Understand CSS Fundamentals</div>
+            <div class="task-box">Task 3: JavaScript Introduction</div>
+            <div class="task-box">Task 4: Build a Simple Web Page</div>
+            <div class="task-box">Task 5: Debugging Basics</div>
+        </div>
+        <div class="module" onclick="toggleModule('module5', 'arrow5')">
+            Module 5: Deployment and DevOps Basics
+            <span class="arrow" id="arrow5">▼</span>
+        </div>
+         <div class="module-details" id="module5">
+            <div class="task-box">Task 1: Learn HTML Basics</div>
+            <div class="task-box">Task 2: Understand CSS Fundamentals</div>
+            <div class="task-box">Task 3: JavaScript Introduction</div>
+            <div class="task-box">Task 4: Build a Simple Web Page</div>
+            <div class="task-box">Task 5: Debugging Basics</div>
+        </div>
+    </div>
+   <div style="display: flex; justify-content: center; margin-top: -40px;">
+    <input type="submit" value="ENROLL" 
+           style="color: #ffffff; background-color: #ff6f61; padding: 10px 20px; font-size: 14px; 
+                  border: none; border-radius: 10px; cursor: pointer; width: 100px;">
+</div>
+</div>
+</form>
+</body>
+</html>

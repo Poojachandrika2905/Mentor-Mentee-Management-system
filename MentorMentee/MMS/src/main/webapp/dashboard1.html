@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor-Mentee Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff7e6;
+            display: flex;
+            height: 100vh;
+            flex-direction: column;
+            overflow-x: hidden; /* Disable horizontal scrolling */
+        }
+        .header {
+            background-color: #ffcc66;
+            height: 300px; /* Increased height to prevent content cut-off */
+            width: 100%;
+            border-bottom-left-radius: 100px;
+            border-bottom-right-radius: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            position: relative;
+        }
+        .home-container {
+            position: absolute;
+            left: 400px; /* Moved slightly to the right */
+            top: 30px; /* Adjusted top position */
+            text-align: right;
+        }
+         .home-container1 {
+            position: absolute;
+            left: 400px; /* Moved slightly to the right */
+            top: 80px; /* Adjusted top position */
+            text-align: right;
+        }
+        .home-container2 {
+            position: absolute;
+            left: 400px; /* Moved slightly to the right */
+            top: 45px; /* Adjusted top position */
+            text-align: right;
+        }
+        
+        .home-link {
+            font-size: 20px; /* Slightly increased size */
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+            display: block;
+        }
+        .status-message {
+            font-size: 18px; /* Increased size */
+            margin-top: 10px; /* Adjusted spacing */
+        }
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+            margin-left: 20px;
+        }
+        .profile-pic {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+        }
+        .user-name {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+        .user-role {
+            font-size: 16px;
+            color: gray;
+            margin-top: 0;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: 20px;
+            width: 200px;
+            margin-left: 20px; /* Move buttons to the left side */
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #ffcc66;
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            border-radius: 30px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="profile-container">
+            <img src="logo.jpg" alt="Profile" class="profile-pic">
+            <p class="user-name">Divya Sri Durga</p>
+            <p class="user-role">Mentee</p>
+        </div>
+        <div class="home-container">
+            <a href="#" class="home-link">Home</a>
+           
+        </div>
+        <div class="home-container1">
+           
+            <p class="status-message">How are you doing today?</p>
+        </div>
+         <div class="home-container2">
+           
+            <p>--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+        </div>
+    </div>
+    <div class="button-container">
+        <a href="http://localhost:8080/MMS/dashboard1.html#" class="btn">Home</a>
+        <a href="#" class="btn">Learning</a>
+        <a href="#" class="btn">Course</a>
+        <a href="#" class="btn">My Mentor</a>
+        <a href="#" class="btn">Mentors</a>
+    </div>
+</body>
+</html>

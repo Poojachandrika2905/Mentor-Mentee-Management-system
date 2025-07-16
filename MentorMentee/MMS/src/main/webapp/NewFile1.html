@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentor-Mentee Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff7e6;
+            display: flex;
+            height: 100vh;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+        .header {
+            background-color: #ffcc66;
+            height: 300px;
+            width: 100%;
+            border-bottom-left-radius: 100px;
+            border-bottom-right-radius: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            position: relative;
+        }
+        .home-container {
+            position: absolute;
+            left: 400px;
+            top: 30px;
+            text-align: right;
+        }
+        .home-container1 {
+            position: absolute;
+            left: 400px;
+            top: 80px;
+            text-align: right;
+        }
+        .home-container2 {
+            position: absolute;
+            left: 400px;
+            top: 45px;
+            text-align: right;
+        }
+        .home-link {
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+            display: block;
+        }
+        .status-message {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+            margin-left: 20px;
+        }
+        .profile-pic {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+        }
+        .user-name {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+        .user-role {
+            font-size: 16px;
+            color: gray;
+            margin-top: 0;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: 20px;
+            width: 100px;
+            
+            margin-left: 20px;
+        }
+        .btn {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: 25px;
+            background-color: #ffcc66;
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            border-radius: 30px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #ffb347;
+        }
+        .btn img {
+            width: 24px;
+            height: 24px;
+            margin-right: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="profile-container">
+            <img src="images/profile.jpg" alt="Profile" class="profile-pic">
+            <p class="user-name">Divya Sri Durga</p>
+            <p class="user-role">Mentee</p>
+        </div>
+        <div class="home-container">
+            <a href="#" class="home-link">Home</a>
+        </div>
+        <div class="home-container1">
+            <p class="status-message">How are you doing today?</p>
+        </div>
+        <div class="home-container2">
+            <p>--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+        </div>
+    </div>
+
+    <!-- Sidebar with image icons -->
+    <div class="button-container">
+        <a href="http://localhost:8080/MMS/dashboard1.html#" class="btn">
+            <img src="images/home-icon.png" alt="Home"> Home
+        </a>
+        <a href="#" class="btn">
+            <img src="images/learning-icon.png" alt="Learning"> Learning
+        </a>
+        <a href="#" class="btn">
+            <img src="images/courses-icon.png" alt="Courses"> Courses
+        </a>
+        <a href="#" class="btn">
+            <img src="images/my-mentor-icon.png" alt="My Mentor"> My Mentor
+        </a>
+        <a href="#" class="btn">
+            <img src="images/mentors-icon.png" alt="Mentors"> Mentors
+        </a>
+    </div>
+
+</body>
+</html>

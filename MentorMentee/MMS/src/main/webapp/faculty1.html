@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-black">
+    <div class="flex flex-col md:flex-row p-6">
+        <!-- Sidebar -->
+        <div class="bg-[#ffcc66] p-6 rounded-lg md:w-1/4 text-center text-black">
+            <img src="faculty.jpg" alt="Dr. James Wilson" class="w-32 h-32 rounded-full mx-auto border-4 border-white">
+            <h1 class="text-xl font-bold mt-4">Dr. James Wilson</h1>
+            <p class="text-black">Professor, Computer Science</p>
+            <p class="text-black">Ph.D. in Computer Science</p>
+            <div class="mt-4 text-sm space-y-2">
+                <p class="flex items-center justify-center"><span class="mr-2">📧</span> james.wilson@university.edu</p>
+                 </div>
+            <button class="mt-4 bg-[#ff6f61] text-white py-2 px-4 rounded-lg hover:bg-[#e65b50]">Select as Mentor</button>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="flex-1 p-6">
+            <!-- About Section -->
+            <div class="bg-gray-200 p-6 rounded-lg mb-6">
+                <h2 class="text-lg font-bold mb-2">About</h2>
+                <p class="text-gray-700">Dr. James Wilson is a distinguished professor with over 15 years of experience in Computer Science education and research. His expertise includes Machine Learning, Computer Networks, and Digital Signal Processing. He has published numerous papers in leading international journals and conferences.</p>
+            </div>
+            
+            <!-- Current Subjects -->
+            <div class="bg-gray-200 p-6 rounded-lg mb-6">
+                <h2 class="text-lg font-bold mb-2">Current Subjects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-gray-300 p-4 rounded-lg flex items-center">
+                        <span class="mr-2">📁</span> <span>Advanced Engineering Mathematics (MA201)</span>
+                    </div>
+                    <div class="bg-gray-300 p-4 rounded-lg flex items-center">
+                        <span class="mr-2">📁</span> <span>Digital Signal Processing (EC302)</span>
+                    </div>
+                    <div class="bg-gray-300 p-4 rounded-lg flex items-center">
+                        <span class="mr-2">📁</span> <span>Computer Networks (CS401)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
