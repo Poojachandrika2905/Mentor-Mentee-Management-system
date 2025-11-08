@@ -35,7 +35,7 @@ public class login extends HttpServlet {
             try {
                 Class.forName("oracle.jdbc.driver.OracleDriver");
                 try (Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "system", "Durga");
-                     // ✅ Check by 'name' instead of 'email'
+                     //  Check by 'name' instead of 'email'
                 		PreparedStatement ps = con.prepareStatement(
                 			    "SELECT role FROM signin WHERE LOWER(TRIM(name)) = LOWER(TRIM(?)) AND password = ?"
                 			)){
@@ -50,7 +50,7 @@ public class login extends HttpServlet {
                         session.setAttribute("userName", username);
                         session.setAttribute("userRole", role);
 
-                        // ✅ Redirect based on role
+                        //  Redirect based on role
                         if (role.equals("Mentee")) {
                             response.sendRedirect("dashboard.jsp");
                         } else {
